@@ -11,29 +11,29 @@ const Projects = () => {
       
       <motion.div
         className="projects-container"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.h1
           className="page-title"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
         >
           Projects
         </motion.h1>
 
-        {/* Projects Grid - Matching alzureiqi.dev format */}
-        <div className="projects-grid-main">
+        {/* Projects Grid - 3x2 (3 columns, 2 rows) */}
+        <div className="projects-grid-main projects-grid-3x2">
           {projects.completed.map((project, index) => (
             <motion.div
               key={project.id}
               className="project-card-main"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               {/* Header with title and links */}
               <div className="project-header">

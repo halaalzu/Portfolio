@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import NavBar from '../components/NavBar'
-import { education, technicalSkills, certifications } from '../data/experience'
+import { education, technicalSkills } from '../data/experience'
 import './About.css'
 
 const About = () => {
@@ -11,15 +11,15 @@ const About = () => {
       
       <motion.div
         className="about-container"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.h1
           className="page-title"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
         >
           About Me
         </motion.h1>
@@ -28,10 +28,10 @@ const About = () => {
           {/* Personal Blurb - Less boxy, more open */}
           <motion.section
             className="about-section-open"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="section-title-open">Hey, I'm Hala!</h2>
             <div className="section-content-open">
@@ -50,10 +50,10 @@ const About = () => {
           {education && education.length > 0 && (
             <motion.section
               className="about-section-open"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
             >
               <h2 className="section-title-open">Education</h2>
               <div className="education-list">
@@ -82,10 +82,10 @@ const About = () => {
           {/* Core Competencies - Less boxy */}
           <motion.section
             className="about-section-open"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h2 className="section-title-open">Core Competencies</h2>
             <div className="competencies-list-open">
@@ -112,10 +112,10 @@ const About = () => {
           {technicalSkills && technicalSkills.length > 0 && (
             <motion.section
               className="about-section-open"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
             >
               <h2 className="section-title-open">Technical Skills</h2>
               <div className="skills-list-open">
@@ -130,33 +130,6 @@ const About = () => {
                   </div>
                 ))}
               </div>
-            </motion.section>
-          )}
-
-          {/* Certifications - Moved from Resume */}
-          {certifications && certifications.length > 0 && (
-            <motion.section
-              className="about-section-open"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <h2 className="section-title-open">Certifications</h2>
-              <ul className="certifications-list-open">
-                {certifications.map((cert, index) => (
-                  <motion.li
-                    key={index}
-                    className="certification-item-open"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    {cert}
-                  </motion.li>
-                ))}
-              </ul>
             </motion.section>
           )}
         </div>

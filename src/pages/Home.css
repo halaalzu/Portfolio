@@ -14,6 +14,7 @@
   width: 100%;
   min-width: 1512px;
   overflow: hidden;
+  padding-bottom: 0;
 }
 
 .hero-background {
@@ -24,6 +25,23 @@
   height: 982px;
   object-fit: cover;
   z-index: 0;
+  display: block;
+}
+
+/* Arabic Hala Hero - Bigger, rotated */
+.arabic-hala-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  font-family: 'ADLaM Display', cursive;
+  font-weight: 800;
+  color: #7B528B;
+  font-size: 180px;
+  text-align: center;
+  direction: rtl;
+  z-index: 5;
+  line-height: normal;
 }
 
 /* Arabic text - Exact Figma positioning */
@@ -148,6 +166,79 @@
   transform: translateX(5px);
 }
 
+/* Hero Title Wrapper */
+.hero-title-wrapper {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  text-align: center;
+}
+
+/* Center Rotated "Hala" Text */
+.center-hala-text {
+  position: absolute;
+  top: 164px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  font-size: 200px;
+  font-weight: 700;
+  color: #7a518b;
+  font-family: 'Chewy', cursive;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+/* Center Rotated "Alzureiqi" Text */
+.center-alzureiqi-text {
+  position: absolute;
+  top: 334px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  font-size: 200px;
+  font-weight: 700;
+  color: #7a518b;
+  font-family: 'Chewy', cursive;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+/* Click Prompt Text */
+.click-prompt-text {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Chewy', cursive;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  z-index: 4;
+  white-space: nowrap;
+}
+
+/* Hero Title Main */
+.hero-title-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+}
+
+.hero-title-main h2 {
+  font-size: 240px;
+  font-weight: 700;
+  color: #7a518b;
+  font-family: 'Chewy', cursive;
+  margin: 0;
+  line-height: 0.9;
+  white-space: nowrap;
+  transform: rotate(-10deg);
+}
+
 /* Icon Stickers - Exact Figma positioning */
 .icon-sticker-figma {
   position: absolute;
@@ -230,6 +321,10 @@
 /* Purple Section - Starting at 982px, no white space */
 .home-bottom-figma {
   position: relative;
+  background: linear-gradient(135deg, #6B3F7F 0%, #8B5BA8 100%);
+  margin-top: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   top: 982px;
   left: 0;
   width: 1512px;
@@ -357,8 +452,17 @@
   font-size: 24px;
   font-weight: 700;
   color: #7B528B;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-family: 'Chewy', cursive;
+}
+
+.featured-card-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B3F7F;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .featured-card-desc {

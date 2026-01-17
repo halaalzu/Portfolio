@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar'
 import TypingAnimation from '../components/TypingAnimation'
 import ContactModal from '../components/ContactModal'
 import { projects } from '../data/projects'
-import { workExperience } from '../data/experience'
 import './Home.css'
 
 // Images from Figma export - place these in /public/assets/
@@ -21,7 +20,6 @@ const vector6 = '/assets/vector-6.svg'
 
 const Home = () => {
   const [isContactOpen, setIsContactOpen] = useState(false)
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
   const [hoveredIcon, setHoveredIcon] = useState(null)
   const navigate = useNavigate()
 
@@ -52,8 +50,8 @@ const Home = () => {
     },
     { 
       id: 'soccer',
-      label: 'Charities', 
-      path: '/charity',
+      label: 'Donate!', 
+      path: '/donate',
       position: { top: '454px', left: '967px' },
       size: { width: '545px', height: '528px' },
       image: soccerImg
@@ -68,17 +66,8 @@ const Home = () => {
     }
   ]
 
-  // Get featured projects (2 from projects + 1 from work experience = 3 total)
-  const featuredProjectsData = [
-    ...projects.featured.slice(0, 2),
-    ...(workExperience.length > 0 ? [{
-      id: 'exp-1',
-      title: workExperience[0].title + ' at ' + workExperience[0].company,
-      description: workExperience[0].description,
-      tech: [],
-      linkTo: '/resume'
-    }] : projects.featured.slice(2, 3))
-  ].slice(0, 3)
+  // Get 3 featured projects from projects.featured array
+  const featuredProjectsData = projects.featured.slice(0, 3)
 
   const handleIconClick = (config) => {
     if (config.onClick) {
@@ -107,71 +96,20 @@ const Home = () => {
           src={image2}
         />
 
-        {/* Arabic text - top-left with exact Figma positioning */}
-        <motion.div
-          className="arabic-text-figma"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          هلا
-        </motion.div>
+        {/* Center Rotated "Hala" Text */}
+        <div className="center-hala-text">
+          Hala
+        </div>
 
-        {/* Main Title "Hala" - exact Figma positioning */}
-        <motion.h1 
-          className="home-title-hala"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <AnimatedName text="Hala" />
-        </motion.h1>
+        {/* Center Rotated "Alzureiqi" Text */}
+        <div className="center-alzureiqi-text">
+          Alzureiqi
+        </div>
 
-        {/* Last Name "Alzureiqi" - exact Figma positioning */}
-        <motion.h1 
-          className="home-title-alzureiqi"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          <AnimatedName text="Alzureiqi" />
-        </motion.h1>
-
-        {/* Click on Object Text - exact Figma positioning */}
-        <motion.div
-          className="click-prompt-figma"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-        >
-          <span 
-            className="click-object-text"
-            onClick={() => setIsNavExpanded(!isNavExpanded)}
-          >
-            (Click on an Object)
-          </span>
-          {isNavExpanded && (
-            <motion.div
-              className="mini-navbar"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-            >
-              {iconConfigs.map((config) => (
-                <button
-                  key={config.id}
-                  onClick={() => {
-                    setIsNavExpanded(false)
-                    handleIconClick(config)
-                  }}
-                  className="mini-nav-item"
-                >
-                  {config.label}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </motion.div>
+        {/* Click Prompt Text */}
+        <div className="click-prompt-text">
+          (Click on an Object)
+        </div>
 
         {/* Icon Stickers - Exact Figma positioning with absolute placement */}
         {iconConfigs.map((config, index) => (
@@ -185,19 +123,18 @@ const Home = () => {
               zIndex: 10,
               cursor: 'pointer'
             }}
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ 
               opacity: 1, 
               scale: 1,
             }}
             transition={{ 
-              delay: 1.2 + (index * 0.1), 
-              duration: 0.5 
-            }}
+              delay: 1.1 + (index * 0.08), 
+              duration: 0.4 }}
             onHoverStart={() => setHoveredIcon(config.id)}
             onHoverEnd={() => setHoveredIcon(null)}
             onClick={() => handleIconClick(config)}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.03 }}
           >
             <img 
               src={config.image} 
@@ -232,10 +169,10 @@ const Home = () => {
         <div className="bottom-content-figma">
           <motion.h2
             className="greeting"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
             Hey, I'm Hala!
           </motion.h2>
@@ -245,10 +182,10 @@ const Home = () => {
           {/* Blurb Section - Normal writing style */}
           <motion.div
             className="blurb-section"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="blurb-text">
               I'm a biomedical designer and researcher passionate about creating innovative healthcare solutions. 
@@ -265,10 +202,10 @@ const Home = () => {
           {/* Featured Work Section */}
           <motion.div
             className="featured-section"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="featured-title">Featured</h3>
             <div className="featured-grid">
@@ -276,15 +213,16 @@ const Home = () => {
                 <motion.div
                   key={project.id}
                   className="featured-card"
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.2, duration: 0.5 }}
-                  whileHover={{ scale: 1.02, y: -3 }}
+                  transition={{ delay: index * 0.12, duration: 0.4 }}
+                  whileHover={{ scale: 1.02 }}
                   onClick={() => handleFeaturedClick(project)}
                   style={{ cursor: project.linkTo ? 'pointer' : 'default' }}
                 >
                   <h4 className="featured-card-title">{project.title}</h4>
+                  <p className="featured-card-type">{project.type}</p>
                   <p className="featured-card-desc">{project.description}</p>
                   <div className="featured-tech-tags">
                     {project.tech.map((tech, i) => (

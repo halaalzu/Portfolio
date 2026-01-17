@@ -22,6 +22,12 @@
   margin-left: 8px;
 }
 
+.typing-text-purple {
+  color: #3D1F4F;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
 .typing-cursor {
   color: var(--white);
   font-weight: 300;

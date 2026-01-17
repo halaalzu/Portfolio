@@ -21,8 +21,9 @@ const NavBar = () => {
     { path: '/about', label: 'About Me' },
     { path: '/projects', label: 'Projects' },
     { path: '/resume', label: 'Experience' },
-    { path: '/charity', label: 'Charities' }
+    { path: '/donate', label: 'Donate!' }
   ]
+
 
   return (
     <motion.nav
@@ -30,37 +31,35 @@ const NavBar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      onMouseEnter={() => !isHome && setIsExpanded(true)}
-      onMouseLeave={() => !isHome && setIsExpanded(false)}
+      onMouseEnter={() => setIsExpanded(true)}
+      onMouseLeave={() => setIsExpanded(false)}
     >
-      <Link to="/" className="nav-home-link-hala">
-        <span className="nav-hala-purple">Hala</span>
+      <Link to="/" className="nav-home-link-hala" aria-label="Home">
+        <span className="nav-hala-purple nav-hala-ar">هلا</span>
       </Link>
-      
-      {!isHome && (
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.ul
-              className="nav-items"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              {navItems.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </motion.ul>
-          )}
-        </AnimatePresence>
-      )}
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.ul
+            className="nav-items"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }

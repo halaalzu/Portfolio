@@ -70,11 +70,16 @@
   line-height: 1.8;
 }
 
-.charities-grid {
+.Donate-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 60px;
+  max-width: 100%;
+}
+
+.Donate-grid.charity-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .charity-card {
@@ -252,7 +257,7 @@
     margin-bottom: 40px;
   }
 
-  .charities-grid {
+  .Donate-grid {
     grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 40px;

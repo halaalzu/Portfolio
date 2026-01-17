@@ -8,14 +8,15 @@
   gap: 15px;
 }
 
-.nav-home-link-hala {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.nav-hala-ar{
+  font-family: inherit;
+  direction: rtl;
+  letter-spacing: 0;
+  font-weight: 900;
+  font-size: 26px; /* adjust if you want bigger */
+  line-height: 1;
 }
+
 
 .nav-home-link-hala:hover {
   transform: scale(1.05);

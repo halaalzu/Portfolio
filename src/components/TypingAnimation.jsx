@@ -13,10 +13,10 @@ const TypingAnimation = () => {
     let timeout
 
     if (!isDeleting && displayText.length < currentPassion.length) {
-      // Typing
+      // Typing - smooth character by character
       timeout = setTimeout(() => {
         setDisplayText(currentPassion.slice(0, displayText.length + 1))
-      }, 100)
+      }, 50)
     } else if (!isDeleting && displayText.length === currentPassion.length) {
       // Pause before deleting
       timeout = setTimeout(() => {
@@ -26,7 +26,7 @@ const TypingAnimation = () => {
       // Deleting
       timeout = setTimeout(() => {
         setDisplayText(currentPassion.slice(0, displayText.length - 1))
-      }, 50)
+      }, 30)
     } else if (isDeleting && displayText.length === 0) {
       // Move to next passion
       setIsDeleting(false)
@@ -42,7 +42,7 @@ const TypingAnimation = () => {
       <AnimatePresence mode="wait">
         <motion.span
           key={displayText}
-          className="typing-text"
+          className="typing-text typing-text-purple"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
