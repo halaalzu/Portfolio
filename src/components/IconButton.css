@@ -1,0 +1,60 @@
+.icon-button-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 120px;
+  height: 120px;
+  background: var(--white);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px var(--shadow);
+  transition: all 0.3s ease;
+  border: 3px solid var(--purple-light);
+  position: relative;
+}
+
+.icon-button:hover {
+  border-color: var(--purple-primary);
+  box-shadow: 0 12px 35px rgba(155, 126, 222, 0.3);
+}
+
+.icon-emoji {
+  font-size: 60px;
+  filter: drop-shadow(2px 2px 4px var(--shadow));
+}
+
+.icon-label {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--purple-dark);
+  color: var(--white);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .icon-button {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icon-emoji {
+    font-size: 45px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+    padding: 4px 10px;
+    bottom: -30px;
+  }
+}
