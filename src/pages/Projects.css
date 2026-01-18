@@ -253,8 +253,9 @@
   }
 
   .project-card-main {
-    padding: 25px;
-    max-height: none;
+    padding: 20px;
+    max-height: 300px;
+    overflow-y: auto;
   }
 
   .project-title-main {

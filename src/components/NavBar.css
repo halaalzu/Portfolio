@@ -98,6 +98,7 @@
   .nav-home-image {
     width: 45px;
     height: 45px;
+    object-fit: contain;
   }
 
   .nav-hala-purple {

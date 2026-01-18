@@ -423,9 +423,10 @@
 
   .resume-item {
     position: relative;
-    max-height: none;
-    padding: 20px;
+    max-height: 250px;
+    padding: 15px;
     margin-left: 20px;
+    overflow-y: auto;
   }
 
   /* Add timeline dot */
