@@ -344,7 +344,7 @@
 /* Decorative Vectors - Exact Figma positioning */
 .purple-decorative-vectors {
   position: absolute;
-  top: -301px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -354,27 +354,32 @@
 
 .vector {
   position: absolute;
+  object-fit: contain;
+  display: none;
 }
 
 .vector-6 {
-  top: 0;
-  left: 1072px;
-  width: 496px;
-  height: 34px;
+  top: 50px;
+  right: 100px;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
 }
 
 .vector-5 {
-  top: 23px;
-  left: 14px;
-  width: 1016px;
-  height: 30px;
+  top: 50px;
+  left: 100px;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
 }
 
 .vector-4 {
-  top: 301px;
-  left: 1px;
-  width: 1512px;
-  height: 1px;
+  bottom: 80px;
+  left: 100px;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
 }
 
 

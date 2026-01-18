@@ -164,9 +164,9 @@ const Home = () => {
       <section className="home-bottom-figma">
         {/* Decorative Vectors */}
         <div className="purple-decorative-vectors">
-          <img src={vector6} alt="Vector" className="vector vector-6" />
-          <img src={vector5} alt="Vector" className="vector vector-5" />
-          <img src={vector4} alt="Vector" className="vector vector-4" />
+          <img src="/assets/ChatGPT Image Jan 16, 2026 at 09_47_56 PM copy.png" alt="Flower" className="vector vector-6" />
+          <img src="/assets/ChatGPT Image Jan 16, 2026 at 09_47_56 PM copy 2.png" alt="Flower" className="vector vector-5" />
+          <img src="/assets/ChatGPT Image Jan 16, 2026 at 09_47_56 PM.png" alt="Flower" className="vector vector-4" />
         </div>
 
 
