@@ -19,7 +19,7 @@ export const projects = {
         "Detail point 2",
         "Detail point 3"
       ],
-      github: null,
+      github: "https://github.com/yourusername/electrical-project",
       liveDemo: null,
       image: null
     },
@@ -39,8 +39,8 @@ export const projects = {
         "Detail point 2",
         "Detail point 3"
       ],
-      github: null,
-      liveDemo: null,
+      github: "https://github.com/yourusername/booktok-platform",
+      liveDemo: "https://booktok-demo.com",
       image: null
     },
     {
@@ -59,8 +59,8 @@ export const projects = {
         "Detail point 2",
         "Detail point 3"
       ],
-      github: null,
-      liveDemo: null,
+      github: "https://github.com/yourusername/catan-game",
+      liveDemo: "https://catan-demo.com",
       image: null
     },
     {
@@ -78,7 +78,7 @@ export const projects = {
         "Detail point 1",
         "Detail point 2"
       ],
-      github: null,
+      github: "https://github.com/yourusername/project-4",
       liveDemo: null,
       image: null
     },
@@ -97,7 +97,7 @@ export const projects = {
         "Detail point 1",
         "Detail point 2"
       ],
-      github: null,
+      github: "https://github.com/yourusername/project-5",
       liveDemo: null,
       image: null
     }

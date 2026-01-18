@@ -1,7 +1,7 @@
 .projects-page {
   min-height: 100vh;
   position: relative;
-  padding: 120px 20px 60px;
+  padding: 80px 20px 60px;
   background: var(--cream);
 }
 
@@ -12,11 +12,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    linear-gradient(rgba(227, 242, 253, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(227, 242, 253, 0.2) 1px, transparent 1px);
-  background-size: 30px 30px;
-  background-color: var(--notebook-blue);
+  background-image: url('/assets/6cf1fba5-12dd-4771-8735-a213e3774660.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
   z-index: 0;
   pointer-events: none;
 }
@@ -33,7 +32,7 @@
   font-weight: 700;
   color: var(--purple-dark);
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-family: 'Chewy', cursive;
 }
 
@@ -55,12 +54,34 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 2px solid var(--purple-light);
   transition: all 0.3s ease;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .project-card-main:hover {
   border-color: var(--purple-primary);
   box-shadow: 0 8px 30px rgba(143, 110, 157, 0.15);
   transform: translateY(-3px);
+}
+
+/* Custom scrollbar for project cards */
+.project-card-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-card-main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.project-card-main::-webkit-scrollbar-thumb {
+  background: var(--purple-light);
+  border-radius: 4px;
+}
+
+.project-card-main::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-primary);
 }
 
 /* Project Header */

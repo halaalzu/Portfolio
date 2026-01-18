@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar'
 import TypingAnimation from '../components/TypingAnimation'
 import ContactModal from '../components/ContactModal'
 import { projects } from '../data/projects'
+import { workExperience } from '../data/experience'
 import './Home.css'
 
 // Images from Figma export - place these in /public/assets/
@@ -12,8 +13,8 @@ const image1 = '/assets/image-1.png'
 const image2 = '/assets/image-2.png'
 const stethoscopeImg = '/assets/chatgpt-image-jan-16-2026-at-10-42-50-PM-1.png'
 const resumeImg = '/assets/chatgpt-image-jan-16-2026-at-10-38-42-PM-1.png'
-const soccerImg = '/assets/chatgpt-image-jan-16-2026-at-10-52-26-PM-1.png'
-const envelopeImg = '/assets/chatgpt-image-jan-16-2026-at-10-46-44-PM-1.png'
+const soccerImg = '/assets/ChatGPT Image Jan 16, 2026 at 10_52_26 PM.png'
+const envelopeImg = '/assets/ChatGPT Image Jan 16, 2026 at 10_51_34 PM.png'
 const vector4 = '/assets/vector-4.svg'
 const vector5 = '/assets/vector-5.svg'
 const vector6 = '/assets/vector-6.svg'
@@ -28,9 +29,9 @@ const Home = () => {
       id: 'stethoscope',
       label: 'About Me', 
       path: '/about',
-      position: { top: '132px', left: '0px' },
+      position: { top: '80px', left: '0px' },
       size: { width: '517px', height: '359px' },
-      image: stethoscopeImg
+      image: '/assets/ChatGPT Image Jan 16, 2026 at 10_51_58 PM.png'
     },
     { 
       id: 'resume',
@@ -38,13 +39,13 @@ const Home = () => {
       path: '/resume',
       position: { top: '0px', left: '1052px' },
       size: { width: '460px', height: '385px' },
-      image: resumeImg
+      image: '/assets/ChatGPT Image Jan 16, 2026 at 10_51_38 PM.png'
     },
     { 
       id: 'envelope',
       label: 'Contact', 
       onClick: () => setIsContactOpen(true),
-      position: { top: '560px', left: '440px' },
+      position: { top: '500px', left: '440px' },
       size: { width: '632px', height: '422px' },
       image: envelopeImg
     },
@@ -60,14 +61,17 @@ const Home = () => {
       id: 'laptop',
       label: 'Projects', 
       path: '/projects',
-      position: { top: '432px', left: '0px' },
+      position: { top: '432px', left: '-60px' },
       size: { width: '568px', height: '550px' },
-      image: image1
+      image: '/assets/ChatGPT Image Jan 16, 2026 at 10_51_36 PM.png'
     }
   ]
 
-  // Get 3 featured projects from projects.featured array
-  const featuredProjectsData = projects.featured.slice(0, 3)
+  // Get first work experience and 2 featured projects
+  const featuredProjectsData = [
+    { ...workExperience[0], type: 'Work Experience', linkTo: '/resume', tech: ['Work Experience'] },
+    ...projects.featured.slice(0, 2).map(project => ({ ...project, linkTo: '/resume' }))
+  ]
 
   const handleIconClick = (config) => {
     if (config.onClick) {
@@ -177,7 +181,16 @@ const Home = () => {
             Hey, I'm Hala!
           </motion.h2>
 
-          <TypingAnimation />
+          <motion.div
+            className="passionate-section"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <h3 className="passionate-text">I'm passionate about</h3>
+            <TypingAnimation />
+          </motion.div>
 
           {/* Blurb Section - Normal writing style */}
           <motion.div
@@ -223,9 +236,9 @@ const Home = () => {
                 >
                   <h4 className="featured-card-title">{project.title}</h4>
                   <p className="featured-card-type">{project.type}</p>
-                  <p className="featured-card-desc">{project.description}</p>
+                  <p className="featured-card-desc">{project.description || ''}</p>
                   <div className="featured-tech-tags">
-                    {project.tech.map((tech, i) => (
+                    {project.tech && project.tech.map((tech, i) => (
                       <span key={i} className="tech-tag">{tech}</span>
                     ))}
                   </div>

@@ -2,7 +2,11 @@
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background: white;
+  background-image: url('/assets/ChatGPT Image Jan 16, 2026 at 10_52_17 PM.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100%;
   min-width: 1512px;
 }
@@ -25,7 +29,7 @@
   height: 982px;
   object-fit: cover;
   z-index: 0;
-  display: block;
+  display: none;
 }
 
 /* Arabic Hala Hero - Bigger, rotated */
@@ -59,6 +63,7 @@
   direction: rtl;
   z-index: 5;
   line-height: normal;
+  display: none;
 }
 
 /* Main Title "Hala" - Exact Figma positioning */
@@ -207,7 +212,7 @@
 /* Click Prompt Text */
 .click-prompt-text {
   position: absolute;
-  bottom: 280px;
+  bottom: 380px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Chewy', cursive;
@@ -304,10 +309,12 @@
 
 .icon-sticker-figma.laptop {
   animation-delay: 0.8s;
+  transform: scale(0.7) !important;
 }
 
 .icon-sticker-figma.envelope {
   animation-delay: 1.6s;
+  transform: scale(0.6) !important;
 }
 
 .icon-sticker-figma.resume {
@@ -316,23 +323,22 @@
 
 .icon-sticker-figma.soccer {
   animation-delay: 3.2s;
+  transform: rotate(-25deg) scale(0.6) !important;
 }
 
 /* Purple Section - Starting at 982px, no white space */
 .home-bottom-figma {
   position: relative;
   background: linear-gradient(135deg, #6B3F7F 0%, #8B5BA8 100%);
-  margin-top: 0;
+  margin-top: -100px;
   padding-top: 60px;
   padding-bottom: 60px;
-  top: 982px;
   left: 0;
   width: 1512px;
   min-height: 689px;
   background: #8F6E9D;
   overflow: hidden;
   padding: 60px 40px 80px;
-  margin-top: 0;
 }
 
 /* Decorative Vectors - Exact Figma positioning */
@@ -388,6 +394,36 @@
   font-family: 'Chewy', cursive;
 }
 
+/* Passionate About Section */
+.passionate-section {
+  position: relative;
+  height: 120px;
+  margin: 20px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.passionate-text {
+  font-family: 'ADLaM Display', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 /* Blurb Section - Centered */
 .blurb-section {
   max-width: 800px;
@@ -413,7 +449,7 @@
 /* Featured Section */
 .featured-section {
   max-width: 1200px;
-  margin: 60px auto 0;
+  margin: -120px auto 0;
   position: relative;
   z-index: 1;
 }

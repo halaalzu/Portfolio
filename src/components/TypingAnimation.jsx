@@ -38,25 +38,16 @@ const TypingAnimation = () => {
 
   return (
     <div className="typing-animation">
-      <span className="typing-prefix">I'm passionate about </span>
-      <AnimatePresence mode="wait">
+      <span className="typing-text typing-text-purple">
+        {displayText}
         <motion.span
-          key={displayText}
-          className="typing-text typing-text-purple"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          className="typing-cursor"
+          animate={{ opacity: [1, 0] }}
+          transition={{ duration: 0.8, repeat: Infinity, repeatType: 'reverse' }}
         >
-          {displayText}
-          <motion.span
-            className="typing-cursor"
-            animate={{ opacity: [1, 0] }}
-            transition={{ duration: 0.8, repeat: Infinity, repeatType: 'reverse' }}
-          >
-            |
-          </motion.span>
+          |
         </motion.span>
-      </AnimatePresence>
+      </span>
     </div>
   )
 }

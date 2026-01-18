@@ -12,11 +12,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    linear-gradient(rgba(227, 242, 253, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(227, 242, 253, 0.2) 1px, transparent 1px);
-  background-size: 30px 30px;
-  background-color: var(--notebook-blue);
+  background-image: url('/ChatGPT Image Jan 17, 2026 at 11_29_35 PM.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
   z-index: 0;
   pointer-events: none;
 }
