@@ -67,10 +67,9 @@ const Home = () => {
     }
   ]
 
-  // Get first work experience and 2 featured projects
+  // Get 3 featured projects
   const featuredProjectsData = [
-    { ...workExperience[0], type: 'Work Experience', linkTo: '/resume', tech: ['Work Experience'] },
-    ...projects.featured.slice(0, 2).map(project => ({ ...project, linkTo: '/resume' }))
+    ...projects.featured.slice(0, 3).map(project => ({ ...project, linkTo: '/projects' }))
   ]
 
   const handleIconClick = (config) => {

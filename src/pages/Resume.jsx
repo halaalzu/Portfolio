@@ -23,7 +23,7 @@ const renderSkillTags = (skills) => {
   return (
     <div className="resume-page">
       <NavBar />
-      <div className="notebook-background" />
+      <div className="experience-background" />
       
       <motion.div
         className="resume-container"
@@ -75,7 +75,6 @@ const renderSkillTags = (skills) => {
                 </div>
                 <div className="item-subtitle">{exp.company}</div>
                 <div className="item-location">{exp.location}</div>
-                <p className="item-description">{exp.description}</p>
                 {renderSkillTags(exp.skills)}
                 {exp.achievements && exp.achievements.length > 0 && (
                   <ul className="item-list">
@@ -117,7 +116,6 @@ const renderSkillTags = (skills) => {
                   </div>
                   <div className="item-subtitle">{exp.organization}</div>
                   <div className="item-location">{exp.location}</div>
-                  <p className="item-description">{exp.description}</p>
                   {renderSkillTags(exp.skills)}
                   {exp.achievements && exp.achievements.length > 0 && (
                     <ul className="item-list">
@@ -160,7 +158,6 @@ const renderSkillTags = (skills) => {
                   </div>
                   <div className="item-subtitle">{vol.organization}</div>
                   <div className="item-location">{vol.location}</div>
-                  <p className="item-description">{vol.description}</p>
                   {renderSkillTags(vol.skills)}
                   {vol.achievements && vol.achievements.length > 0 && (
                     <ul className="item-list">

@@ -6,13 +6,13 @@
   overflow-x: hidden;
 }
 
-.notebook-background {
+.charity-background {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/assets/ChatGPT Image Jan 17, 2026 at 11_41_00 PM.png');
+  background-image: url('/assets/ChatGPT Image Jan 17, 2026 at 11_41_00 PM.png?v=3');
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
@@ -61,10 +61,10 @@
 }
 
 .charity-intro {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   color: var(--text-dark);
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto 30px;
   line-height: 1.6;
 }

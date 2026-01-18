@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="about-page">
       <NavBar />
-      <div className="notebook-background" />
+      <div className="about-background" />
       
       <motion.div
         className="about-container"
@@ -35,13 +35,11 @@ const About = () => {
           >
             <h2 className="section-title-open">Hey, I'm Hala!</h2>
             <div className="section-content-open">
-              <p>
-                I'm passionate about biomedical design, healthcare innovation, and making a positive impact in underprivileged communities. 
-                Through my work and research, I strive to bridge the gap between technology and healthcare to improve patient outcomes.
+              <p style={{ textIndent: '2em' }}>
+                I'm passionate about biomedical design, healthcare innovation, and making a positive impact in underprivileged communities. Through my work and research, I strive to bridge the gap between technology and healthcare to improve patient outcomes, especially by creating health tech that's accessible in low-resource settings where care is limited and small, affordable solutions can save lives.
               </p>
-              <p>
-                When I'm not working on medical devices or conducting research, you'll find me reading, exploring new ideas, 
-                and supporting causes that matter. I believe in the power of interdisciplinary collaboration and continuous learning.
+              <p style={{ textIndent: '2em' }}>
+                When I'm not working on medical devices or conducting research, you'll find me reading, exploring new ideas, and supporting causes that matter. I believe in the power of interdisciplinary collaboration and continuous learning, and I'm especially interested in AI/ML in healthcare, prosthetics, nuclear medicine, and research that pushes healthcare forward.
               </p>
             </div>
           </motion.section>
@@ -79,15 +77,40 @@ const About = () => {
             </motion.section>
           )}
 
+          {/* Technical Skills - Moved from Resume */}
+          {technicalSkills && technicalSkills.length > 0 && (
+            <motion.section
+              className="about-section-open"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h2 className="section-title-open">Technical Skills</h2>
+              <div className="skills-list-open">
+                {technicalSkills.map((category, index) => (
+                  <div key={index} className="skill-category-open">
+                    <h4 className="skill-category-title">{category.category}</h4>
+                    <div className="skill-tags-open">
+                      {category.skills.map((skill, i) => (
+                        <span key={i} className="skill-tag-open">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
+          )}
+
           {/* Core Competencies - Less boxy */}
           <motion.section
             className="about-section-open"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
           >
-            <h2 className="section-title-open">Core Competencies</h2>
+            <h2 className="section-title-open">Core Values</h2>
             <div className="competencies-list-open">
               <div className="competency-item-open">
                 <h3>Biomedical Design</h3>
@@ -107,31 +130,6 @@ const About = () => {
               </div>
             </div>
           </motion.section>
-
-          {/* Technical Skills - Moved from Resume */}
-          {technicalSkills && technicalSkills.length > 0 && (
-            <motion.section
-              className="about-section-open"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-            >
-              <h2 className="section-title-open">Technical Skills</h2>
-              <div className="skills-list-open">
-                {technicalSkills.map((category, index) => (
-                  <div key={index} className="skill-category-open">
-                    <h4 className="skill-category-title">{category.category}</h4>
-                    <div className="skill-tags-open">
-                      {category.skills.map((skill, i) => (
-                        <span key={i} className="skill-tag-open">{skill}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.section>
-          )}
         </div>
       </motion.div>
     </div>

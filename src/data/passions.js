@@ -3,8 +3,13 @@
 export const passions = [
   "Reading",
   "Biomedical Design",
-  "Supporting Underprivileged Communities",
   "Healthcare Innovation",
-  "Medical Research"
+  "Medical Research",
+  "Volunteering",
+  "Travel",
+  "Culture & Faith",
+  "Research & Physics",
+  "LEGO",
+  "Coffee"
   // Add more passions here as strings - they will automatically appear in the animation
 ];

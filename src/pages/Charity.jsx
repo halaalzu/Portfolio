@@ -7,7 +7,7 @@ const Charity = () => {
   return (
     <div className="charity-page">
       <NavBar />
-      <div className="notebook-background" />
+      <div className="charity-background" />
 
       <motion.div
         className="charity-container"

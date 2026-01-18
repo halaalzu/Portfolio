@@ -5,99 +5,112 @@ export const projects = {
   completed: [
     {
       id: 1,
-      title: "Electrical Sub Team Project",
-      description: "Advanced electrical and control systems design for robotics",
-      tech: ["CAD", "Arduino", "Python"],
-      type: "Hardware Design",
+      title: "BookTok",
+      description: "BookTok turns book summaries into short, engaging videos and shows them in a scrollable feed so users can quickly discover new reads. It makes finding your next book feel like scrolling TikTok, but for books.",
+      tech: ["Node.js", "Express", "React", "Gemini API", "ElevenLabs", "FFmpeg", "Cloudinary", "MongoDB Atlas"],
+      type: "Full-Stack Web Application",
       status: "completed",
+      date: "Jan. 2026",
       keyAchievements: [
-        "Designed PCB and electrical systems",
-        "Implemented control algorithms"
+        "Built AI-powered video generation pipeline using Gemini API for text analysis and ElevenLabs for voice narration",
+        "Implemented independent Node.js/Express backend with REST APIs for image generation, text-to-speech, video composition, and cloud storage",
+        "Designed responsive React frontend with TikTok-style scrollable video feed"
       ],
       details: [
-        "Detail point 1",
-        "Detail point 2",
-        "Detail point 3"
+        "AI-powered video generation from book summaries",
+        "Text-to-speech narration using ElevenLabs",
+        "Cloud media storage with Cloudinary",
+        "MongoDB Atlas for database management"
       ],
-      github: "https://github.com/yourusername/electrical-project",
+      github: "https://github.com/ishashenoy/booktok-frontend",
+      githubBackend: "https://github.com/ishashenoy/booktok-backend",
       liveDemo: null,
       image: null
     },
     {
       id: 2,
-      title: "BookTok Analytics Platform",
-      description: "Social reading analytics and book recommendation system",
-      tech: ["React", "Node.js", "MongoDB"],
-      type: "Full-Stack Web Application",
+      title: "Accessible Catan",
+      description: "Accessible Catan is a SolidWorks redesign of the classic board game to improve playability for users with hand tremors using stable, magnetic, slot-fit components refined through multiple prototypes.",
+      tech: ["SolidWorks", "Iterative Design", "3D Modeling", "Prototyping"],
+      type: "AutoCAD/3D Print",
       status: "completed",
+      date: "Sep. – Dec. 2025",
       keyAchievements: [
-        "Built recommendation algorithm",
-        "Implemented real-time analytics dashboard"
+        "Redesigned a board game to improve accessibility for users with hand tremors using SolidWorks and a human-centered focus",
+        "Built SolidWorks assemblies with magnetic, slot-based components to improve stability and alignment",
+        "Iteratively tested and refined 3 prototypes, documented failures, and refined tolerances based on feedback"
       ],
       details: [
-        "Detail point 1",
-        "Detail point 2",
-        "Detail point 3"
+        "Human-centered design approach for accessibility",
+        "Magnetic and slot-based component system",
+        "Multiple prototype iterations with user testing"
       ],
-      github: "https://github.com/yourusername/booktok-platform",
-      liveDemo: "https://booktok-demo.com",
+      github: "https://github.com/halaalzu/Accessible-Catan-3D-Print",
+      liveDemo: null,
       image: null
     },
     {
       id: 3,
-      title: "Catan Game Development",
-      description: "Interactive multiplayer strategy game implementation",
-      tech: ["JavaScript", "Canvas API", "Web Sockets"],
-      type: "Game Development",
+      title: "Flower Puzzle Assembly",
+      description: "Flower Puzzle Assembly is a multi-part mechanical puzzle designed with interlocking components and smooth motion in mind. It went through 4 design revisions to improve fit, alignment, and overall reliability.",
+      tech: ["SolidWorks", "Iterative Design", "Tolerance Analysis", "Part Modeling"],
+      type: "AutoCAD/3D Print",
       status: "completed",
+      date: "Sep. – Dec. 2025",
       keyAchievements: [
-        "Implemented game logic and turn system",
-        "Built real-time multiplayer features"
+        "Designed a multi-component mechanical puzzle using SolidWorks part modeling and assemblies",
+        "Integrated interlocking components and moving parts, applying tolerance analysis to ensure proper fit, alignment, and smooth motion",
+        "Iterated 4 design revisions to resolve alignment issues and improve overall mechanical reliability"
       ],
       details: [
-        "Detail point 1",
-        "Detail point 2",
-        "Detail point 3"
+        "Multi-component interlocking puzzle design",
+        "Tolerance analysis for precise fit",
+        "4 design revisions for mechanical reliability"
       ],
-      github: "https://github.com/yourusername/catan-game",
-      liveDemo: "https://catan-demo.com",
+      github: "https://github.com/halaalzu/Fragrant-Water-Lily-3D-Print",
+      liveDemo: null,
       image: null
     },
     {
       id: 4,
-      title: "Project Name 4",
-      description: "A brief description of the project",
-      tech: ["Tech 1", "Tech 2"],
-      type: "Project Type",
+      title: "2000 Nissan Skyline R34 GT-R 3D Print",
+      description: "I designed a detailed CAD model of the 2000 Nissan Skyline R34 GT-R (my favourite car from my favourite character) so I had to recreate it myself.",
+      tech: ["CAD", "3D Modeling", "Digital Fabrication"],
+      type: "AutoCAD/3D Print",
       status: "completed",
       keyAchievements: [
-        "Achievement 1",
-        "Achievement 2"
+        "Created a detailed CAD model of a real-world vehicle",
+        "Demonstrated precision modeling and geometric construction",
+        "Prepared model for digital fabrication and 3D printing"
       ],
       details: [
-        "Detail point 1",
-        "Detail point 2"
+        "Detailed CAD modeling of real vehicle",
+        "Precision geometric construction",
+        "Ready for 3D printing"
       ],
-      github: "https://github.com/yourusername/project-4",
+      github: "https://github.com/halaalzu/2000-Nissan-Skyline-R34-GT-R-3D-Print",
       liveDemo: null,
       image: null
     },
     {
       id: 5,
-      title: "Project Name 5",
-      description: "A brief description of the project in progress",
-      tech: ["Tech 1", "Tech 2"],
-      type: "Project Type",
-      status: "in-progress",
+      title: "To-Do List",
+      description: "I built a full-stack to-do list app that lets users add, complete, and delete tasks with real-time updates through a clean web interface. It reinforced core CRUD logic, backend routing, and organized data handling.",
+      tech: ["Python", "Flask", "HTML/CSS", "JavaScript"],
+      type: "Full-Stack Web Application",
+      status: "completed",
+      date: "Dec. 2025",
       keyAchievements: [
-        "Current achievement 1",
-        "Current achievement 2"
+        "Developed a full-stack task management application using Flask, implementing REST-style routes to support task creation, updating, and deleting through backend Python logic",
+        "Built a front-end with HTML, CSS, and JavaScript for user interactions and reflect real-time task state changes",
+        "Implemented basic CRUD logic and program flow in Python"
       ],
       details: [
-        "Detail point 1",
-        "Detail point 2"
+        "Task management with add, complete, and delete",
+        "CRUD logic and REST-style routing",
+        "Real-time task state updates"
       ],
-      github: "https://github.com/yourusername/project-5",
+      github: "https://github.com/halaalzu/To-Do-List",
       liveDemo: null,
       image: null
     }
@@ -105,26 +118,26 @@ export const projects = {
   featured: [
     {
       id: 1,
-      title: "Electrical Sub Team Project",
-      description: "Advanced electrical and control systems design",
-      tech: ["CAD", "Arduino", "Python"],
+      title: "Electrical Sub-team Member",
+      description: "Collaborated with mechanical and software sub-teams to design an assistive knee brace",
+      tech: ["PCB Design", "KiCad", "Arduino", "BLE"],
       type: "Hardware Design",
       linkTo: "/projects"
     },
     {
       id: 2,
-      title: "BookTok Analytics Platform",
-      description: "Social reading analytics and recommendations",
-      tech: ["React", "Node.js"],
+      title: "BookTok",
+      description: "AI media pipeline that transforms book summaries into short-form videos",
+      tech: ["Node.js", "React", "Gemini API"],
       type: "Full-Stack Web",
       linkTo: "/projects"
     },
     {
       id: 3,
-      title: "Catan Game Development",
-      description: "Interactive multiplayer strategy game",
-      tech: ["JavaScript", "Web Sockets"],
-      type: "Game Development",
+      title: "Accessible Catan",
+      description: "SolidWorks redesign of classic board game for users with hand tremors",
+      tech: ["SolidWorks", "3D Modeling"],
+      type: "AutoCAD/3D Print",
       linkTo: "/projects"
     }
   ]
