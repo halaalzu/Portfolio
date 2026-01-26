@@ -8,7 +8,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  min-width: 1512px;
 }
 
 /* Hero Section - Exact Figma Layout */
@@ -16,7 +15,6 @@
   min-height: 982px;
   position: relative;
   width: 100%;
-  min-width: 1512px;
   overflow: hidden;
   padding-bottom: 0;
 }

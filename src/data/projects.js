@@ -25,7 +25,7 @@ export const projects = {
       github: "https://github.com/ishashenoy/booktok-frontend",
       githubBackend: "https://github.com/ishashenoy/booktok-backend",
       liveDemo: null,
-      image: null
+      images: ['/assets/booktok-logo.jpeg', '/assets/1768250233760.jpeg', 'https://youtu.be/0o5lP3xi_ak']
     },
     {
       id: 2,
@@ -47,7 +47,11 @@ export const projects = {
       ],
       github: "https://github.com/halaalzu/Accessible-Catan-3D-Print",
       liveDemo: null,
-      image: null
+      images: [
+        '/assets/SolidWroks 3D Version Assembly.jpg',
+        '/assets/Painted Final Prints.jpg',
+        '/assets/Painted 3D Version .jpg'
+      ]
     },
     {
       id: 3,
@@ -69,7 +73,7 @@ export const projects = {
       ],
       github: "https://github.com/halaalzu/Fragrant-Water-Lily-3D-Print",
       liveDemo: null,
-      image: null
+      images: ['/assets/Flower Mechanism Video.mov', '/assets/STL Print Layout.png']
     },
     {
       id: 4,
@@ -90,7 +94,7 @@ export const projects = {
       ],
       github: "https://github.com/halaalzu/2000-Nissan-Skyline-R34-GT-R-3D-Print",
       liveDemo: null,
-      image: null
+      images: [] // Add image URLs here: ['/assets/skyline-1.png', '/assets/skyline-2.png']
     },
     {
       id: 5,
@@ -112,7 +116,7 @@ export const projects = {
       ],
       github: "https://github.com/halaalzu/To-Do-List",
       liveDemo: null,
-      image: null
+      images: [] // Add image URLs here: ['/assets/todo-1.png', '/assets/todo-2.png']
     }
   ],
   featured: [

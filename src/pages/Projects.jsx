@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import NavBar from '../components/NavBar'
+import ImageCarousel from '../components/ImageCarousel'
 import { projects } from '../data/projects'
 import './Projects.css'
 
@@ -84,6 +85,11 @@ const Projects = () => {
                   )}
                 </div>
               </div>
+
+              {/* Image Carousel */}
+              {project.images && project.images.length > 0 && (
+                <ImageCarousel images={project.images} />
+              )}
 
               {/* Description */}
               <p className="project-description-main">{project.description}</p>
